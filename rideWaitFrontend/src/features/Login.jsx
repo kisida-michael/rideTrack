@@ -32,9 +32,11 @@ const Login = () => {
                     Create New Account
                   </button>
                 </Link>
-                <button className='min-w-full flex-1 font-bold rounded-full px-4 py-2 text-lg bg-primary hover:opacity-80 dark:border-gradient-br-blue-gradient-bg-content gradient-border-2 dark:hover:bg-gradient-to-r from-gradient-blue to-gradient-blue-light '>
-                  Login
-                </button>
+                <Link to='/dashboard'>
+                  <button className='min-w-full flex-1 font-bold rounded-full px-4 py-2 text-lg bg-primary hover:opacity-80 dark:border-gradient-br-blue-gradient-bg-content gradient-border-2 dark:hover:bg-gradient-to-r from-gradient-blue to-gradient-blue-light '>
+                    Login
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

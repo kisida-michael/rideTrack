@@ -6,14 +6,13 @@ const UserSchema = new Schema({
   id: { type: String, required: true },
   notifications: [
     {
-      parkName: { type: String },
+      parkId: { type: Number, ref: 'Parks' },
       notification: { type: Boolean },
     },
   ],
-  favorites: [
+  pinnedRides: [
     {
-      parkName: { type: String },
-      ride: { type: Schema.Types.ObjectId, ref: 'Rides' },
+      ride: { type: Number, ref: 'Rides' },
     },
   ],
   phoneNum: { type: String, required: true },
