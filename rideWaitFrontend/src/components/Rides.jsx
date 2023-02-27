@@ -4,11 +4,11 @@ import { useLocation } from 'react-router-dom';
 import DashboardParks from './DashboardParksContainer';
 
 const Rides = () => {
-  const location = useLocation();
-  // const { name, rides } = location.state;
-
-  // console.log(name); // should log the name of the park
-  // console.log(rides); // should log the array of rides for the park
+  const { state } = useLocation();
+  const name = state?.name || '';
+  const rides = state?.rides || [];
+  console.log(name);
+  console.log(rides);
   return (
     <div className='min-h-screen bg-background text-white'>
       <h1>Rides at Park</h1>

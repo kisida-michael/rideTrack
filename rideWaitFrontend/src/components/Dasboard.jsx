@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
-import DashboardParksContainer from './DashboardParksContainer';
+import DashboardParks from './DashboardParksContainer';
 import { Outlet } from 'react-router-dom';
+import groupParks from '../utils/groupParks';
 
 import Rides from './Rides';
-const Dasboard = () => {
+
+const Dashboard = () => {
+  const [parks, setParks] = useState(groupParks);
+
   return (
     <div className='min-h-screen bg-white dark:bg-background '>
       <div className='flex flex-col '>
@@ -14,7 +18,7 @@ const Dasboard = () => {
           Favorite Rides
         </h1>
         <div className='ml-8 mt-12'>
-          <DashboardParksContainer />
+          <DashboardParks parks={parks} />
           {/* <Rides /> */}
         </div>
       </div>
@@ -22,4 +26,4 @@ const Dasboard = () => {
   );
 };
 
-export default Dasboard;
+export default Dashboard;
