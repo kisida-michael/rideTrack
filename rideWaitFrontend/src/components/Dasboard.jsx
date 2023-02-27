@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import DashboardParksContainer from './DashboardParksContainer';
+import { Outlet } from 'react-router-dom';
+
 import Rides from './Rides';
 const Dasboard = () => {
   return (

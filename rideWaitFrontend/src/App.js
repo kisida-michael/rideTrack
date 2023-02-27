@@ -10,9 +10,6 @@ import SignUp from './features/SignUp';
 import DashboardParks from './components/DashboardParksContainer';
 
 import Rides from './components/Rides';
-function Background({ children }) {
-  return <div className='bg-primary h-screen'>{children}</div>;
-}
 
 function App() {
   return (
@@ -20,8 +17,11 @@ function App() {
       <Route path='/' element={<Layout />}>
         <Route index element={<WelcomeScreen />} />
         <Route path='login' element={<Login />} />
-        <Route path='dashboard' element={<Dasboard />} />
-        <Route path='/rides' component={Rides} />
+
+        <Route path='dashboard' element={<Dasboard />}>
+          <Route path='rides' element={<Rides />} />
+        </Route>
+
         <Route path='signUp' element={<SignUp />} />
       </Route>
     </Routes>
