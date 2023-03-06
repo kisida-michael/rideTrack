@@ -3,10 +3,10 @@ const path = require('path');
 const app = express();
 const http = require('http').Server(app);
 
-app.use(express.static(path.join(__dirname, './rideWaitFrontend/build')));
+app.use(express.static(path.join(__dirname, '/rideWaitFrontend/build')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + './ridewWaitFrontend/build/index.html'));
+  res.sendFile(path.join(__dirname + '/ridewWaitFrontend/build/index.html'));
 });
 
 const PORT = process.env.PORT || 3081;
