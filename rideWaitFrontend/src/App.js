@@ -5,7 +5,6 @@ import Layout from './components/Layout';
 import WelcomeScreen from './components/WelcomeScreen';
 import Login from './features/Login';
 import Dasboard from './components/Dasboard';
-import WaitTimes from './components/WaitTimes';
 import SignUp from './features/SignUp';
 import DashboardParks from './components/DashboardParksContainer';
 

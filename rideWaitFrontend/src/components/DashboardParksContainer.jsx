@@ -11,7 +11,7 @@ const DashboardParks = () => {
     <div>
       {data.map(({ name, parks }) => (
         <div className='' key={name}>
-          <h2 className=' text-primary dark:text-off-white font-bold text-xl'>
+          <h2 className=' text-primary dark:text-off-white font-bold text-lg'>
             {name}
           </h2>
           {parks.map(({ name, rides }) => (
@@ -20,7 +20,7 @@ const DashboardParks = () => {
                 to={`/dashboard/${name}`}
                 state={{ rides: rides, name: name }}
               >
-                <button className='mb-2 text-white dark:text-off-white  flex-1 font-bold rounded-full px-4 py-2 text-lg bg-primary hover:opacity-80 hover:dark:opacity-100 dark:border-gradient-br-blue-gradient-bg-content gradient-border-2 dark:hover:bg-gradient-to-r from-gradient-blue to-gradient-blue-light '>
+                <button className='mb-2 text-white dark:text-off-white  flex-1 font-bold rounded-full px-4 py-2 text-md bg-primary hover:opacity-80 hover:dark:opacity-100 dark:border-gradient-br-blue-gradient-bg-content gradient-border-2 dark:hover:bg-gradient-to-r from-gradient-blue to-gradient-blue-light '>
                   {name}
                 </button>
               </Link>

@@ -30,6 +30,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        white: '#ffffff',
         'background-light': 'B7C1D8',
         background: '#24304D',
         primary: '#3081FD',

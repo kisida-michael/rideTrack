@@ -14,11 +14,19 @@ const groupParks = () => {
       park = { name: item.park_name, rides: [] };
       acc[item.group].parks.push(park);
     }
-    // console.log(park);
-    park.rides.push(item);
+
+    const ride = {
+      id: item.id,
+      name: item.name,
+      is_open: item.is_open,
+      wait_time: item.wait_time,
+      last_updated: item.last_updated,
+      url: item.url, // add the url property from rides.json
+    };
+
+    park.rides.push(ride);
     return acc;
   }, {});
-  // console.log(JSON.stringify(Object.values(groups)));
 
   return Object.values(groups);
 };
