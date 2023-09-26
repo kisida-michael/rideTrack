@@ -1,15 +1,20 @@
 const express = require('express');
-const path = require('path');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+require('dotenv').config();
+
+require ('./api/parks/parkDataController');
+
+// Initialize your express app
 const app = express();
-const http = require('http').Server(app);
 
-app.use(express.static(path.join(__dirname, '/rideWaitFrontend/build')));
+// Middleware setup
+app.use(bodyParser.json());
+app.use(cors()); // This allows all CORS requests. Adjust accordingly based on your needs.
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/rideWaitFrontend/build/index.html'));
-});
 
-const PORT = process.env.PORT || 3081;
-http.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+// Start the server
+const PORT = process.env.PORT || 3000; // Use the port from the environment variables or default to 3000.
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
